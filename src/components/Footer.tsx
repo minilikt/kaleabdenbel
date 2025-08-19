@@ -67,7 +67,7 @@ export const Footer: React.FC = () => {
                   { label: 'Experience', href: '#experience' },
                   { label: 'Contact', href: '#contact' }
                 ].map((link, index) => (
-                  <Button
+                  <button
                     key={index}
                     onClick={() => {
                       const element = document.querySelector(link.href);
@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
                     className="text-muted-foreground hover:text-primary transition-colors text-left"
                   >
                     {link.label}
-                  </Button>
+                  </button>
                 ))}
               </nav>
             </div>
@@ -108,13 +108,13 @@ export const Footer: React.FC = () => {
             <p className="text-muted-foreground text-sm flex items-center gap-1">
               © {currentYear} Kaleab Denbel. All rights reserved.
             </p>
-            <Button
+            <button
               onClick={scrollToTop}
               className="text-muted-foreground hover:text-primary transition-colors text-sm"
             >
               Back to top 
               <ArrowUp className="h-4 w-4 ml-1" />
-            </Button>
+            </button>
           </div>
         </div>
       </div>
