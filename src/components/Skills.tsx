@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
@@ -8,7 +8,7 @@ export const Skills: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("frontend");
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
 
-  const skillCategories = {
+  const skillCategories = useMemo(() => ({
     frontend: {
       title: "Frontend Development",
       description: "Creating beautiful and interactive user interfaces",
@@ -65,7 +65,7 @@ export const Skills: React.FC = () => {
         { name: "Figma", level: 88, icon: "🎨", description: "Collaborative design tool", color: "text-purple-600" }
       ]
     }
-  };
+  }), []);
 
   // Animate progress values
   useEffect(() => {
