@@ -1,4 +1,6 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
+import { Button } from './ui/button';
+import Link from 'next/link';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -16,7 +18,7 @@ export const Footer: React.FC = () => {
     },
     {
       icon: <Mail className="h-5 w-5" />,
-      href: "mailto:kaleab@example.com",
+      href: "mailto:kaleabdenbelkebede@gmail.com",
       label: "Email"
     }
   ];
@@ -39,7 +41,7 @@ export const Footer: React.FC = () => {
               </p>
               <div className="flex space-x-4">
                 {socialLinks.map((link, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={link.href}
                     target="_blank"
@@ -48,7 +50,7 @@ export const Footer: React.FC = () => {
                     aria-label={link.label}
                   >
                     {link.icon}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -65,7 +67,7 @@ export const Footer: React.FC = () => {
                   { label: 'Experience', href: '#experience' },
                   { label: 'Contact', href: '#contact' }
                 ].map((link, index) => (
-                  <button
+                  <Button
                     key={index}
                     onClick={() => {
                       const element = document.querySelector(link.href);
@@ -76,7 +78,7 @@ export const Footer: React.FC = () => {
                     className="text-muted-foreground hover:text-primary transition-colors text-left"
                   >
                     {link.label}
-                  </button>
+                  </Button>
                 ))}
               </nav>
             </div>
@@ -85,33 +87,34 @@ export const Footer: React.FC = () => {
             <div className="space-y-4">
               <h4 className="font-semibold">Let&apos;s Connect</h4>
               <div className="space-y-2 text-muted-foreground">
-                <p>San Francisco, CA</p>
-                <a 
-                  href="mailto:kaleab@example.com"
+                <p>Addis Ababa</p>
+                <Link
+                  href="mailto:kaleabdenbelkebede@gmail.com"
                   className="hover:text-primary transition-colors"
                 >
                   kaleabdenbelkebede@gmail.com
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="tel:+15551234567"
                   className="hover:text-primary transition-colors"
                 >
                   +251 988 815 914
-                </a>
+                </Link>
               </div>
             </div>
           </div>
 
           <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm flex items-center gap-1">
-              © {currentYear} Kaleab Denbel. Made with using React & Tailwind CSS
+              © {currentYear} Kaleab Denbel. All rights reserved.
             </p>
-            <button
+            <Button
               onClick={scrollToTop}
               className="text-muted-foreground hover:text-primary transition-colors text-sm"
             >
-              Back to top ↑
-            </button>
+              Back to top 
+              <ArrowUp className="h-4 w-4 ml-1" />
+            </Button>
           </div>
         </div>
       </div>
