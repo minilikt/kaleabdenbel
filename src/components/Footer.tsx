@@ -86,7 +86,7 @@ export const Footer: React.FC = () => {
             {/* Contact Info */}
             <div className="space-y-4">
               <h4 className="font-semibold">Let&apos;s Connect</h4>
-              <div className="space-y-2 text-muted-foreground">
+              <div className="flex-col space-y-2 text-muted-foreground">
                 <p>Addis Ababa</p>
                 <Link
                   href="mailto:kaleabdenbelkebede@gmail.com"
@@ -94,8 +94,8 @@ export const Footer: React.FC = () => {
                 >
                   kaleabdenbelkebede@gmail.com
                 </Link>
-                <Link 
-                  href="tel:+15551234567"
+                <Link
+                  href="tel:+251988815914"
                   className="hover:text-primary transition-colors"
                 >
                   +251 988 815 914
