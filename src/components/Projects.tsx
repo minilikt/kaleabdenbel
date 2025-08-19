@@ -117,13 +117,13 @@ export const Projects: React.FC = () => {
                       <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                         Featured
                       </Badge>
-                      <button
+                      <Button
                         type="button"
                         className="absolute bottom-4 right-4 flex h-8 w-8 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg border border-zinc-950/10 bg-white/80 text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-800 focus-visible:ring-2 active:scale-[0.98] dark:border-zinc-50/10 dark:bg-zinc-900/80 dark:text-zinc-500 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
                         aria-label="Open project details"
                       >
                         <PlusIcon size={16} />
-                      </button>
+                      </Button>
                     </div>
                     <CardHeader>
                       <CardTitle className="text-xl">{project.title}</CardTitle>

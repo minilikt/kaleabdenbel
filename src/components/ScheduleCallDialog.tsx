@@ -14,6 +14,9 @@ import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Calendar, Clock, User, MessageSquare, Phone } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
+import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
+import { Calendar as ShadCalendar } from './ui/calendar';
+
 
 interface ScheduleCallDialogProps {
   children: React.ReactNode;
@@ -173,16 +176,30 @@ export const ScheduleCallDialog: React.FC<ScheduleCallDialogProps> = ({ children
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="preferredDate">Preferred Date *</Label>
-                  <Input
-                    id="preferredDate"
-                    name="preferredDate"
-                    type="date"
-                    value={formData.preferredDate}
-                    onChange={handleChange}
-                    required
-                    min={new Date().toISOString().split('T')[0]}
-                  />
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className="w-full text-left"
+                      >
+                        {formData.preferredDate
+                          ? new Date(formData.preferredDate).toLocaleDateString()
+                          : "Select date"}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0">
+                      <ShadCalendar
+                        mode="single"
+                        selected={formData.preferredDate ? new Date(formData.preferredDate) : undefined}
+                        onSelect={(date) => setFormData(prev => ({
+                          ...prev,
+                          preferredDate: date?.toISOString().split("T")[0] || ''
+                        }))}
+                      />
+                    </PopoverContent>
+                  </Popover>
                 </div>
+
                 
                 <div className="space-y-2">
                   <Label htmlFor="preferredTime">Preferred Time *</Label>

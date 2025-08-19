@@ -4,63 +4,63 @@ import { Calendar, MapPin, Building } from 'lucide-react';
 
 export const Experience: React.FC = () => {
   const experiences = [
-    {
-      title: "Junior Developer",
-      company: "Code Academy Labs",
-      location: "Boston, MA",
-      period: "2021 - 2022",
-      type: "Full-time",
-      description: "Started my professional journey learning best practices and contributing to various projects under senior developer guidance.",
-      achievements: [
-        "Completed 100+ code reviews",
-        "Contributed to 10+ open source projects",
-        "Achieved 95% code quality score"
-      ],
-      technologies: ["JavaScript", "Python", "Git", "Linux", "MySQL"]
-    },
-    {
-      title: "Frontend Developer",
-      company: "Digital Agency Pro",
-      location: "New York, NY",
-      period: "2022 - 2023",
-      type: "Full-time",
-      description: "Specialized in creating responsive and interactive user interfaces for various clients across different industries.",
-      achievements: [
-        "Delivered 25+ responsive websites",
-        "Improved website performance by average 50%",
-        "Collaborated with design team on UI/UX improvements"
-      ],
-      technologies: ["JavaScript", "HTML5", "CSS3", "React", "Sass"]
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Startup Innovations",
-      location: "Austin, TX",
-      period: "2023 - 2024",
-      type: "Full-time",
-      description: "Developed and maintained multiple client projects from conception to deployment. Worked directly with clients to understand requirements and deliver solutions.",
-      achievements: [
-        "Built 15+ web applications from scratch",
-        "Increased client satisfaction rate to 98%",
-        "Reduced development costs by 30% through code reusability"
-      ],
-      technologies: ["Vue.js", "Express.js", "MongoDB", "Firebase", "React Native"]
-    },
-    {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      period: "2024 - Present",
-      type: "Full-time",
-      description: "Lead development of enterprise-scale applications serving 1M+ users. Architected microservices infrastructure and mentored junior developers.",
-      achievements: [
-        "Reduced application load time by 40% through optimization",
-        "Led team of 5 developers on major product redesign",
-        "Implemented CI/CD pipeline reducing deployment time by 60%"
-      ],
-      technologies: ["React", "Node.js", "AWS", "Docker", "PostgreSQL"]
-    }
-  ];
+  {
+    title: "Founder & Hardware Developer",
+    company: "Heir Tech",
+    location: "Addis Ababa, Ethiopia",
+    period: "2022 - Present",
+    type: "Full-time",
+    description: "Founded Heir Tech, a company dedicated to building impactful technologies that support young innovators and provide real-world solutions in robotics, software, and hardware.",
+    achievements: [
+      "Launched 'Smart Blind Stick' project integrating sensors, camera, and emergency SMS system",
+      "Mentored young developers on full-stack projects and startup guidance",
+      "Built partnerships to support early-stage tech entrepreneurs"
+    ],
+    technologies: ["Arduino", "Flutter", "Django", "MongoDB", "Google Maps API"]
+  },
+  {
+    title: "Full Stack Developer",
+    company: "Independent Projects",
+    location: "Remote",
+    period: "2021 - Present",
+    type: "Freelance",
+    description: "Designed and built multiple software solutions, ranging from SAT preparation apps to IoT integrations, focusing on both frontend and backend systems.",
+    achievements: [
+      "Developed SAT Prep App with quiz system, progress tracking, and MongoDB backend",
+      "Created Django API for image recognition with database integration",
+      "Built SMS emergency alert system within Flutter applications"
+    ],
+    technologies: ["React", "Flutter", "Django", "MongoDB", "Node.js"]
+  },
+  {
+    title: "Mobile App Developer",
+    company: "FlexSafe",
+    location: "Remote",
+    period: "2024 - Present",
+    type: "Contract",
+    description: "Designed and developed a fitness application with personalized workout routines, progress tracking, and a clean UI/UX to enhance user engagement.",
+    achievements: [
+      "Built workout scheduling and tracking system using ExistLand state management",
+      "Implemented daily workout progression showing one exercise at a time",
+      "Developed dark and light mode interface for seamless user experience"
+    ],
+    technologies: ["React Native", "ExistLand", "MongoDB", "Node.js"]
+  },
+  {
+    title: "Community Builder & Volunteer",
+    company: "Abugida Tech & Volunteer Programs",
+    location: "Addis Ababa, Ethiopia",
+    period: "2019 - 2021",
+    type: "Part-time",
+    description: "Actively contributed to local tech and community initiatives. Focused on youth empowerment through skill development and volunteer programs.",
+    achievements: [
+      "Founded a community to help teenagers with college applications and internships",
+      "Raised funds for children through nonprofit volunteering programs",
+      "Advocated for accessible tech education opportunities"
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "WordPress"]
+  }
+];
 
   return (
     <section id="experience" className="py-20">
